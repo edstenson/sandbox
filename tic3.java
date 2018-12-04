@@ -4,7 +4,6 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class tic3 {
-
   public static void main(String[] args) {
 
 //  Set up initial variables
@@ -29,7 +28,6 @@ public class tic3 {
     System.out.println("=====================");
     System.out.println("Player " + thisPlayer + " to go first");
     System.out.println("=====================\n");
-
 
 //  Main playing loop
 //  =================
@@ -78,14 +76,12 @@ public class tic3 {
       System.out.println("\n");
     }
 
-
 //  Check for special commands such as quit or man
 //  ==============================================
     public static void parseCommandLine(int command) {
       if (command == 99) { System.exit(0); }
       if (command == 88) { displayHelp(); }
     }
-
 
 //  Display help page
 //  =================
@@ -100,26 +96,22 @@ public class tic3 {
 //    System.out.println("  88 to display this page\n");
     }
 
-
 //  Check if anyone has won yet
 //  ===========================
 // Check rows
     public static String checkWinner(String[] theBoard) {
-            if (theBoard[0] == theBoard[1] && theBoard[0] == theBoard[2]) { return theBoard[0]; }
-            if (theBoard[3] == theBoard[4] && theBoard[3] == theBoard[5]) { return theBoard[3]; }
-            if (theBoard[6] == theBoard[7] && theBoard[6] == theBoard[8]) { return theBoard[6]; }
-            
-            // Check columns
-            if (theBoard[0] == theBoard[3] && theBoard[0] == theBoard[6]) { return theBoard[0]; }
-            if (theBoard[1] == theBoard[4] && theBoard[1] == theBoard[7]) { return theBoard[1]; }
-            if (theBoard[2] == theBoard[5] && theBoard[2] == theBoard[8]) { return theBoard[2]; }
-            
-            //  Check diagonals
-            if (theBoard[0] == theBoard[4] && theBoard[0] == theBoard[8]) { return theBoard[0]; }
-            if (theBoard[2] == theBoard[4] && theBoard[2] == theBoard[6]) { return theBoard[2]; }
-            
-            return "none";
+      // There are 8 winning states: 3 rows, 3 cols, 2, diagonals
+        if (theBoard[0] == theBoard[1] && theBoard[0] == theBoard[2]) { return theBoard[0]; }
+        if (theBoard[3] == theBoard[4] && theBoard[3] == theBoard[5]) { return theBoard[3]; }
+        if (theBoard[6] == theBoard[7] && theBoard[6] == theBoard[8]) { return theBoard[6]; }
+        // Check columns
+        if (theBoard[0] == theBoard[3] && theBoard[0] == theBoard[6]) { return theBoard[0]; }
+        if (theBoard[1] == theBoard[4] && theBoard[1] == theBoard[7]) { return theBoard[1]; }
+        if (theBoard[2] == theBoard[5] && theBoard[2] == theBoard[8]) { return theBoard[2]; }            
+        //  Check diagonals
+        if (theBoard[0] == theBoard[4] && theBoard[0] == theBoard[8]) { return theBoard[0]; }
+        if (theBoard[2] == theBoard[4] && theBoard[2] == theBoard[6]) { return theBoard[2]; }
+        // No one has won yet but we have to return something
+        return "none";
         }
-
 }
-

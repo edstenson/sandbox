@@ -42,7 +42,7 @@ public class tic3 {
 
       // Check that the square has not already been chosen and is not out of bounds
       while (ourBoard[move] != "__" && move < 10 && move > -1) {
-        System.out.print("Sorry, that's already taken. What's your move " + thisPlayer + "?");
+        System.out.print("Sorry, that's already taken. What's your move " + thisPlayer + "? ");
         move = sc.nextInt();
         parseCommandLine(move);
       }

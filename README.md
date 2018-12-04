@@ -2,11 +2,11 @@
 
 This is still work in progress.
 
-## Compile
+To compile:
 
-JavaC tic3.java
+  JavaC tic3.java
 
-## Run
+To run:
 
-java tic3
+  java tic3
 

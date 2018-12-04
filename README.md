@@ -1,3 +1,3 @@
 # sandbox
 
-This is still Work in Progress.
+This is still work in progress.

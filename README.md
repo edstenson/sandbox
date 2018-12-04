@@ -2,11 +2,7 @@
 
 This is still work in progress.
 
-To compile:
+To compile:  JavaC tic3.java
 
-  JavaC tic3.java
-
-To run:
-
-  java tic3
+To run:  java tic3
 

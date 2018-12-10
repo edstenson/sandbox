@@ -1,5 +1,7 @@
 // Copyright 2018 Diffblue limited. All rights reserved.
 
+package com.diffblue.tictactoe;
+
 import java.util.Scanner;
 import java.util.Random;
 
